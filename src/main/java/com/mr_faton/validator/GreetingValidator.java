@@ -25,3 +25,7 @@ public class GreetingValidator implements Validator{
         }
     }
 }
+/*
+Simple validator who checks correctness of input namely that the string don't start with "abc" if it's true we throw
+exception
+ */

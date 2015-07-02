@@ -33,3 +33,6 @@ public class IntegerPair {
         return num1 + "." + num2;
     }
 }
+/*
+This a simple bean, which is a field of an our main bean, which associate with form on the server page
+ */

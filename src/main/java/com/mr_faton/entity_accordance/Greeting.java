@@ -5,7 +5,7 @@ import javax.faces.bean.RequestScoped;
 import com.mr_faton.entity.IntegerPair;
 
 import java.io.Serializable;
-
+//must have an annotation ManagedBean to show JSF that is bean associated with something on page
 @ManagedBean
 @RequestScoped
 public class Greeting implements Serializable{
@@ -54,3 +54,6 @@ public class Greeting implements Serializable{
                 "intPair=" + intPair;
     }
 }
+/*
+This is our main bean associated with the input form on our server
+ */
