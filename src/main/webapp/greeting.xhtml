@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+    <title>Hello dear user</title>
+</h:head>
+<h:body>
+    <h:form style="align-content: center">
+        <h2>This is a simple example</h2>
+        <h:outputLabel value="Введи сюда своё имя:"/>
+        <h:inputText id="text1In" value="#{greeting.text1}" required="true">
+            <f:validator validatorId="GreetingValidator"/>
+        </h:inputText>
+        <h:message for="text1In" style="color: red; border-style: double"/>
+        <br/>
+        <h:outputLabel value="Введи сюда строку:"/>
+        <h:inputText id="text2In" value="#{greeting.text2}">
+            <f:validateLength minimum="2" maximum="5"/>
+        </h:inputText>
+        <h:message for="text2In" style="color: blue; border-style: dashed"/>
+        <br/>
+        <h:outputLabel value="Введи сюда число:"/>
+        <h:inputText id="numIn" value="#{greeting.number}" required="true">
+            <f:convertNumber integerOnly="true"/>
+        </h:inputText>
+        <h:message for="numIn" style="color: brown; border-style: groove"/>
+        <br/>
+        <h:outputLabel value="Введи сюда пару чисел:"/>
+        <h:inputText id="intPairIn" value="#{greeting.intPair}">
+            <f:converter converterId="IntegerPairConverter"/>
+        </h:inputText>
+        <h:message for="intPairIn" style="color: blueviolet; border-style: dotted "/>
+        <br/>
+        <h:commandButton value="Handle" action="resultData"/>
+    </h:form>
+    <h:messages style="color: red; border: dotted"/>
+</h:body>
+</html>
